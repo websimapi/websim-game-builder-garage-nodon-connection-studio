@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Builder Garage - Nodon Connection Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo">GARAGE</h1>
+            <p class="subtitle">Nodon Connection Studio</p>
+        </div>
+        <div class="connection-counter">
+            <span class="counter-label">Connections:</span>
+            <span id="connectionCount">0</span>
+            <span class="counter-max">/1024</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="nodon-palette">
+            <div class="palette-section">
+                <h3 class="palette-title input-category">Input Nodons</h3>
+                <div class="nodon-grid">
+                    <div class="nodon input-nodon" data-type="button" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Button</span>
+                    </div>
+                    <div class="nodon input-nodon" data-type="stick" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Stick</span>
+                    </div>
+                    <div class="nodon input-nodon" data-type="shake" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Shake</span>
+                    </div>
+                    <div class="nodon input-nodon" data-type="constant" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Constant</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="palette-section">
+                <h3 class="palette-title logic-category">Logic Nodons</h3>
+                <div class="nodon-grid">
+                    <div class="nodon logic-nodon" data-type="calculator" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Calculator</span>
+                    </div>
+                    <div class="nodon logic-nodon" data-type="timer" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Timer</span>
+                    </div>
+                    <div class="nodon logic-nodon" data-type="counter" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Counter</span>
+                    </div>
+                    <div class="nodon logic-nodon" data-type="and" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">AND</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="palette-section">
+                <h3 class="palette-title output-category">Output Nodons</h3>
+                <div class="nodon-grid">
+                    <div class="nodon output-nodon" data-type="sound" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Sound</span>
+                    </div>
+                    <div class="nodon output-nodon" data-type="vibration" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Vibration</span>
+                    </div>
+                    <div class="nodon output-nodon" data-type="camera" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Camera</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="palette-section">
+                <h3 class="palette-title object-category">Object Nodons</h3>
+                <div class="nodon-grid">
+                    <div class="nodon object-nodon" data-type="person" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Person</span>
+                    </div>
+                    <div class="nodon object-nodon" data-type="car" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">Car</span>
+                    </div>
+                    <div class="nodon object-nodon" data-type="ufo" draggable="true">
+                        <div class="nodon-eye"></div>
+                        <span class="nodon-label">UFO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="workspace">
+            <div class="workspace-header">
+                <h2>Connection Workspace</h2>
+                <button id="clearWorkspace" class="clear-btn">Clear All</button>
+            </div>
+            <div id="canvas-container" class="canvas-container">
+                <svg id="connection-svg" class="connection-svg"></svg>
+                <div id="workspace-area" class="workspace-area"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="instructions">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Drag Nodons from the palette to the workspace</li>
+            <li>Click and drag between Nodon connection points to create wires</li>
+            <li>Build your logic network just like in Game Builder Garage!</li>
+            <li>Watch connections animate and come to life</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
